@@ -25,7 +25,7 @@ public struct AsyncImage<Content: View>: View {
         if let content = content {
             content(loader.asyncImagePhase)
         } else if let image = loader.asyncImagePhase.image {
-            image
+            image.resizable()
         } else {
             Color(.secondarySystemBackground)
         }
